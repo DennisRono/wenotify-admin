@@ -1,0 +1,329 @@
+{
+  "name": "NBO Tech Labs",
+  "description": "Transforming Ideas Into Digital Reality. We're more than just a technology company. We're your partner in digital transformation, helping businesses evolve, adapt, and thrive in an ever-changing digital landscape.",
+  "url": "https://tq.nbotechlabs.com",
+  "logo": "https://tq.nbotechlabs/logo.png",
+  "author": "NBO Tech Labs",
+  "twitterHandle": "@tq.nbotechlabs",
+  "foundingYear": "2024",
+  "location": "Nairobi, Kenya",
+  "application": {
+    "version": "1.0.0",
+    "environment": "production",
+    "languages": ["en", "sw", "fr"],
+    "timezone": "Africa/Nairobi",
+    "defaultCurrency": "KES",
+    "theme": {
+      "primaryColor": "#2196F3",
+      "secondaryColor": "#FFC107",
+      "logoDark": "https://tq.nbotechlabs.com/logo-dark.png"
+    }
+  },
+  "contact": {
+    "email": "info@nbotechlabs.com",
+    "phone": "+254-798-116-710",
+    "address": "123 Innovation Ave, Nairobi, Kenya"
+  },
+  "social": {
+    "twitter": "@tq.nbotechlabs",
+    "facebook": "tq.nbotechlabs",
+    "linkedin": "company/nbotechlabs"
+  },
+  "features": {
+    "authentication": {
+      "enabled": true,
+      "methods": ["oauth", "jwt", "email"]
+    },
+    "registration": {
+      "enabled": true,
+      "requireEmailVerification": true
+    },
+    "notifications": {
+      "email": true,
+      "sms": false,
+      "push": true
+    },
+    "analytics": {
+      "enabled": true,
+      "provider": "GoogleAnalytics",
+      "trackingId": "UA-XXXXXX-X"
+    }
+  },
+  "maintenance": {
+    "enabled": false,
+    "message": "We are currently undergoing scheduled maintenance."
+  },
+  "scheduler": {
+    "enabled": true,
+    "timezone": "Africa/Nairobi"
+  },
+  "environments": {
+    "production": {
+      "url": "https://tq.nbotechlabs.com"
+    },
+    "staging": {
+      "url": "https://staging.tq.nbotechlabs.com"
+    },
+    "development": {
+      "url": "http://localhost:3000"
+    }
+  },
+  "releaseDate": "2025-05-17T09:29:00+03:00",
+  "tagline": "Pioneering the future with AI, software, and robotics",
+  "shortDescription": "NBO Tech Labs empowers businesses with cutting-edge AI solutions, robust software development, and advanced robotics integration.",
+  "company": {
+    "name": "NBO Tech Labs",
+    "foundingYear": "2024",
+    "slogan": "Transforming Ideas Into Digital Reality",
+    "employeeCount": "500+",
+    "globalPresence": {
+      "countries": 12,
+      "offices": 8,
+      "description": "Offices in 8 major tech hubs worldwide"
+    },
+    "achievements": {
+      "projectsDelivered": "12K+",
+      "activeClients": "950+",
+      "clientSatisfaction": "4.7★",
+      "awards": "20+ international awards for innovation"
+    }
+  },
+  "mission": {
+    "statement": "To revolutionize businesses through innovative digital solutions that drive growth, efficiency, and competitive advantage.",
+    "description": "We're committed to delivering cutting-edge technology that transforms how organizations operate and succeed in the digital age."
+  },
+  "vision": {
+    "statement": "To be the global leader in digital transformation, recognized for our innovative solutions, exceptional service, and commitment to client success.",
+    "description": "We envision a future where technology empowers every business to reach its full potential."
+  },
+  "values": [
+    {
+      "name": "Client Success",
+      "description": "We measure our success through the achievements and growth of our clients. Their goals become our goals, and their challenges become our challenges."
+    },
+    {
+      "name": "Innovation",
+      "description": "We constantly push boundaries and explore new technologies to deliver cutting-edge solutions that drive real business value."
+    },
+    {
+      "name": "Collaboration",
+      "description": "We believe in the power of teamwork and partnership, working closely with our clients to achieve exceptional results."
+    },
+    {
+      "name": "Integrity",
+      "description": "We maintain the highest standards of professional ethics and transparency in all our dealings with clients and partners."
+    }
+  ],
+  "services": [
+    {
+      "name": "AI-Powered Solutions",
+      "description": "Harness the power of artificial intelligence to optimize your business processes and gain valuable insights.",
+      "capabilities": [
+        "Machine Learning Models",
+        "Natural Language Processing",
+        "Computer Vision Systems",
+        "Predictive Analytics"
+      ]
+    },
+    {
+      "name": "Custom Software Development",
+      "description": "Tailored software solutions designed to meet your unique business needs and drive growth.",
+      "capabilities": [
+        "Web & Mobile Applications",
+        "Enterprise Software",
+        "Cloud-Native Solutions",
+        "API Development & Integration"
+      ]
+    },
+    {
+      "name": "Robotics & Automation",
+      "description": "Integrate cutting-edge robotics and automation technologies to enhance efficiency and productivity.",
+      "capabilities": [
+        "Industrial Robotics",
+        "Collaborative Robots (Cobots)",
+        "Autonomous Systems",
+        "Process Automation"
+      ]
+    }
+  ],
+  "industries": [
+    {
+      "name": "Healthcare",
+      "description": "The Healthcare industry is increasingly dependent on technology for improving patient care, operational efficiency, and research advancements.",
+      "solutions": [
+        "Electronic Health Records (EHR)",
+        "Telemedicine Applications",
+        "Healthcare Analytics",
+        "Health Applications",
+        "AI in Diagnostics",
+        "IoT in Healthcare"
+      ]
+    },
+    {
+      "name": "Finance",
+      "description": "Financial technology solutions for banking, insurance, and investment sectors."
+    },
+    {
+      "name": "Technology",
+      "description": "Cutting-edge solutions for technology companies and startups."
+    },
+    {
+      "name": "Security",
+      "description": "Advanced security solutions for protecting digital assets and infrastructure."
+    },
+    {
+      "name": "Retail & E-Commerce",
+      "description": "Digital transformation solutions for retail and e-commerce businesses."
+    },
+    {
+      "name": "Business Services",
+      "description": "Technology solutions for business service providers."
+    },
+    {
+      "name": "Construction and Infrastructure",
+      "description": "Digital solutions for construction and infrastructure projects."
+    }
+  ],
+  "leadership": [
+    {
+      "name": "Dennis Kibet",
+      "position": "Chief Executive Officer",
+      "description": "Visionary leader with experience in scaling digital technologies.",
+      "expertise": [
+        "Strategic Leadership",
+        "Digital Transformation",
+        "Innovation"
+      ],
+      "social": {
+        "linkedin": "linkedin.com/in/denniskibet",
+        "twitter": "twitter.com/denniskibet",
+        "github": "github.com/DennisRono"
+      }
+    },
+    {
+      "name": "Robert Kimani",
+      "position": "Chief Technology Officer",
+      "expertise": ["AI/ML", "Cloud Architecture", "Enterprise Solutions"]
+    },
+    {
+      "name": "Peter Kigo",
+      "position": "Chief Financial Officer",
+      "expertise": ["Financial Strategy", "M&A", "Investment"]
+    },
+    {
+      "name": "Isaac Kuria",
+      "position": "Chief Operations Officer",
+      "expertise": ["Operations", "Process Optimization", "Team Building"]
+    },
+    {
+      "name": "John Kariuki",
+      "position": "Chief Marketing Officer",
+      "expertise": ["B2B Marketing", "Brand Strategy", "Global Markets"]
+    }
+  ],
+  "caseStudies": [
+    {
+      "title": "AI-Driven Supply Chain Optimization",
+      "category": "Artificial Intelligence",
+      "description": "How we helped a global retailer reduce costs and improve efficiency using predictive analytics."
+    },
+    {
+      "title": "Next-Gen E-commerce Platform",
+      "category": "Software Development",
+      "description": "Building a scalable, feature-rich online marketplace that revolutionized user experience."
+    },
+    {
+      "title": "Automated Warehouse Management",
+      "category": "Robotics & IoT",
+      "description": "Implementing smart robotics solutions to streamline warehouse operations and boost productivity."
+    }
+  ],
+  "testimonials": [
+    {
+      "name": "Sarah Johnson",
+      "position": "CEO",
+      "company": "TechInnovate",
+      "quote": "NBO Tech Labs's AI solutions have revolutionized our data analysis capabilities. We've seen a 40% increase in predictive accuracy and significant cost savings."
+    },
+    {
+      "name": "Michael Chen",
+      "position": "CTO",
+      "company": "GlobalManufacturing",
+      "quote": "The robotics integration NBO Tech Labs implemented has transformed our production line. Efficiency is up by 35%, and quality control issues have decreased by 60%."
+    },
+    {
+      "name": "Elena Rodriguez",
+      "position": "Director of Innovation",
+      "company": "HealthTech Solutions",
+      "quote": "NBO Tech Labs's custom software solutions have streamlined our patient management system. We've reduced administrative time by 50% and improved patient satisfaction scores."
+    }
+  ],
+  "seo": {
+    "metaTitle": "NBO Tech Labs | AI, Software & Robotics Solutions",
+    "metaDescription": "NBO Tech Labs empowers businesses with cutting-edge AI solutions, robust software development, and advanced robotics integration. Transform your business today.",
+    "keywords": [
+      "AI solutions",
+      "software development",
+      "robotics integration",
+      "digital transformation",
+      "machine learning",
+      "custom software",
+      "technology innovation",
+      "Kenya tech company",
+      "African tech solutions"
+    ],
+    "ogImage": "https://tq.nbotechlabs.com/og-image.jpg",
+    "twitterCard": "summary_large_image"
+  },
+  "structuredData": {
+    "organization": {
+      "@type": "Organization",
+      "name": "NBO Tech Labs",
+      "url": "https://tq.nbotechlabs.com",
+      "logo": "https://tq.nbotechlabs.com/logo.png",
+      "foundingDate": "2024",
+      "founders": [
+        {
+          "@type": "Person",
+          "name": "Dennis Kibet"
+        }
+      ],
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "telephone": "+254-798-116-710",
+        "email": "info@nbotechlabs.com",
+        "contactType": "customer service"
+      },
+      "sameAs": [
+        "https://twitter.com/tq.nbotechlabs",
+        "https://facebook.com/tq.nbotechlabs",
+        "https://linkedin.com/company/nbotechlabs"
+      ],
+      "description": "NBO Tech Labs empowers businesses with cutting-edge AI solutions, robust software development, and advanced robotics integration."
+    }
+  },
+  "partners": [
+    {
+      "name": "Safaricom",
+      "logo": "https://tq.nbotechlabs.com/partners/safaricom-logo.png"
+    },
+    {
+      "name": "Google",
+      "logo": "https://tq.nbotechlabs.com/partners/google-logo.png"
+    },
+    {
+      "name": "Pesalink",
+      "logo": "https://tq.nbotechlabs.com/partners/pesalink-logo.png"
+    },
+    {
+      "name": "Airtel",
+      "logo": "https://tq.nbotechlabs.com/partners/airtel-logo.png"
+    }
+  ],
+  "legal": {
+    "privacyPolicy": "https://tq.nbotechlabs.com/privacy-policy",
+    "termsOfService": "https://tq.nbotechlabs.com/terms-of-service",
+    "cookiePolicy": "https://tq.nbotechlabs.com/cookie-policy",
+    "accessibilityStatement": "https://tq.nbotechlabs.com/accessibility-statement"
+  }
+}
