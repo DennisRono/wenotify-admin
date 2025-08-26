@@ -3,7 +3,7 @@ import dynamic from "next/dynamic"
 import WenotiFyLoader from '@/components/shared/loader'
 
 const DashboardView = dynamic(() => import("@/features/dashboard"), {
-  ssr: false,
+  ssr: true,
   loading:() => <WenotiFyLoader />
 })
 
