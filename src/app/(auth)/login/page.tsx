@@ -4,8 +4,8 @@ import { Button } from '@/components/ui/button'
 import { FloatingLabelInput } from '@/components/shared/floating-label-input'
 import type React from 'react'
 import { useState } from 'react'
-import { AlertCircle, Eye, EyeOff, Loader2 } from 'lucide-react'
-import { useAppDispatch } from '@/store/hooks'
+import { CircleAlert, Eye, EyeOff, Loader2 } from 'lucide-react'
+import { Alert, AlertDescription, AlertTitle } from '@/components/ui/alert'
 import { useAuth } from '@/hooks/use-auth'
 import Link from 'next/link'
 
@@ -66,10 +66,10 @@ const LoginPage = () => {
   return (
     <div className="min-h-screen w-full flex items-center justify-center bg-gray-50 p-4">
       <div className="w-full max-w-md">
-        <div className="w-full rounded-sm bg-red-400 border-red-600 border-2 p-2 flex items-center gap-2">
-          <AlertCircle className="text-red-600" />
-          <p className="text-white">Wrong Password!</p>
-        </div>
+        <Alert variant="destructive">
+          <CircleAlert />
+          <AlertTitle>Heads up!</AlertTitle>
+        </Alert>
         <br />
         <h1 className="text-3xl font-bold text-gray-900 mb-8">Sign in</h1>
 

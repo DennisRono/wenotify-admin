@@ -120,6 +120,12 @@
     @apply min-h-screen text-foreground;
   }
 
+  input:-webkit-autofill {
+    box-shadow: 0 0 0px 1000px white inset !important;
+    -webkit-text-fill-color: #111 !important;
+    transition: background-color 5000s ease-in-out 0s;
+  }
+
   .card:before,
   [class*='card-']:before {
     background-image: none !important;

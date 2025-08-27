@@ -10,12 +10,7 @@ export interface InputProps
 const FloatingInput = React.forwardRef<HTMLInputElement, InputProps>(
   ({ className, ...props }, ref) => {
     return (
-      <Input
-        placeholder=" "
-        className={cn('peer', className)}
-        ref={ref}
-        {...props}
-      />
+      <Input placeholder=" " className={cn(className)} ref={ref} {...props} />
     )
   }
 )
@@ -28,7 +23,32 @@ const FloatingLabel = React.forwardRef<
   return (
     <Label
       className={cn(
-        'absolute start-2 top-0 z-10 origin-[0] -translate-y-1/2 scale-75 transform bg-white px-2 text-sm text-purple-600 duration-300 peer-placeholder-shown:top-4 peer-placeholder-shown:-translate-y-0 peer-placeholder-shown:scale-100 peer-placeholder-shown:bg-transparent peer-placeholder-shown:text-gray-500 peer-focus:top-0 peer-focus:-translate-y-1/2 peer-focus:scale-75 peer-focus:bg-white peer-focus:px-2 peer-focus:text-purple-600 dark:bg-gray-950 dark:peer-focus:bg-gray-950 rtl:peer-focus:left-auto rtl:peer-focus:translate-x-1/4 cursor-text font-medium',
+        'absolute start-2 top-0 z-10 origin-[0] -translate-y-1/2 scale-75 transform ',
+        ' bg-white px-2 text-sm text-purple-600 duration-300',
+
+        'peer-placeholder-shown:top-4',
+        'peer-placeholder-shown:scale-100',
+        'peer-placeholder-shown:translate-y-0',
+        'peer-placeholder-shown:bg-transparent',
+        'peer-placeholder-shown:text-gray-500',
+
+        'peer-focus:top-0',
+        'peer-focus:-translate-y-1/2',
+        'peer-focus:scale-75',
+        'peer-focus:bg-white',
+        'peer-focus:px-2',
+        'peer-focus:text-purple-600',
+
+        'peer-autofill:top-0',
+        'peer-autofill:-translate-y-1/2',
+        'peer-autofill:scale-75',
+        'peer-autofill:bg-white',
+        'peer-autofill:px-2',
+        'peer-autofill:text-purple-600',
+
+        'dark:bg-gray-950 dark:peer-focus:bg-gray-950',
+        'rtl:peer-focus:left-auto rtl:peer-focus:translate-x-1/4',
+        'cursor-text font-medium',
         className
       )}
       ref={ref}
