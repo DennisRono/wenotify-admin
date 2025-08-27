@@ -3,7 +3,11 @@ import { useCallback } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { AppDispatch, RootState } from '@/store/store'
 import { login, logout, register } from '@/store/actions/auth'
-import { reduxLogoutUser, resetAuthError, updateUserProfile } from '@/store/slices/auth-slice'
+import {
+  reduxLogoutUser,
+  resetAuthError,
+  updateUserProfile,
+} from '@/store/slices/auth-slice'
 import {
   LoginCredentials,
   RegisterData,
@@ -24,7 +28,13 @@ export function useAuth() {
   } = useSelector((state: RootState) => state.auth)
 
   const loginUser = useCallback(
-    async (credentials: LoginCredentials) => {
+    async (
+      credentials: LoginCredentials
+    ): Promise<{
+      success: boolean
+      data?: Record<string, any> | undefined
+      error?: Record<string, any> | undefined
+    }> => {
       try {
         const resultAction = await dispatch(login(credentials))
         if (login.fulfilled.match(resultAction)) {
@@ -96,7 +106,7 @@ export function useAuth() {
       if (!user) return false
 
       if (Array.isArray(role)) {
-        return role.some(r => user.roles.includes(r))
+        return role.some((r) => user.roles.includes(r))
       }
 
       return user.roles.includes(role)

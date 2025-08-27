@@ -4,7 +4,7 @@ import { Button } from '@/components/ui/button'
 import { FloatingLabelInput } from '@/components/shared/floating-label-input'
 import type React from 'react'
 import { useState } from 'react'
-import { Eye, EyeOff, Loader2 } from 'lucide-react'
+import { AlertCircle, Eye, EyeOff, Loader2 } from 'lucide-react'
 import { useAppDispatch } from '@/store/hooks'
 import { useAuth } from '@/hooks/use-auth'
 import Link from 'next/link'
@@ -45,6 +45,7 @@ const PasswordFloatingInput = ({
 
 const LoginPage = () => {
   const [email, setEmail] = useState('')
+  const [error, setError] = useState<string | null>(null)
   const [password, setPassword] = useState('')
   const [rememberMe, setRememberMe] = useState(false)
 
@@ -52,12 +53,24 @@ const LoginPage = () => {
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
-    await login({ username: email, password, rememberMe })
+    const res: {
+      success: boolean
+      data?: Record<string, any> | undefined
+      error?: Record<string, any> | undefined
+    } = await login({ username: email, password, rememberMe })
+    if (!res.success && res.error) {
+      setError(res.error.detail || res.error.message)
+    }
   }
 
   return (
     <div className="min-h-screen w-full flex items-center justify-center bg-gray-50 p-4">
       <div className="w-full max-w-md">
+        <div className="w-full rounded-sm bg-red-400 border-red-600 border-2 p-2 flex items-center gap-2">
+          <AlertCircle className="text-red-600" />
+          <p className="text-white">Wrong Password!</p>
+        </div>
+        <br />
         <h1 className="text-3xl font-bold text-gray-900 mb-8">Sign in</h1>
 
         <form onSubmit={handleSubmit} className="space-y-6">

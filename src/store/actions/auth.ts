@@ -14,7 +14,7 @@ export const login = createAsyncThunk<
     urlEncodedBody.append('password', credentials.password)
 
     const response = await fetch(
-      `${process.env.NEXT_PUBLIC_BACKEND_URL}/auth/api/v1/auth/login/oauth`,
+      `${process.env.NEXT_PUBLIC_BACKEND_URL}/api/v1/users/auth/login`,
       {
         method: 'POST',
         credentials: 'include',
