@@ -5,9 +5,10 @@ import { FloatingLabelInput } from '@/components/shared/floating-label-input'
 import type React from 'react'
 import { useState } from 'react'
 import { CircleAlert, Eye, EyeOff, Loader2 } from 'lucide-react'
-import { Alert, AlertDescription, AlertTitle } from '@/components/ui/alert'
+import { Alert, AlertTitle } from '@/components/ui/alert'
 import { useAuth } from '@/hooks/use-auth'
 import Link from 'next/link'
+import { useRouter } from 'next/navigation'
 
 const PasswordFloatingInput = ({
   id,
@@ -50,6 +51,7 @@ const LoginPage = () => {
   const [rememberMe, setRememberMe] = useState(false)
 
   const { login, isLoading } = useAuth()
+  const router = useRouter()
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
@@ -60,16 +62,20 @@ const LoginPage = () => {
     } = await login({ username: email, password, rememberMe })
     if (!res.success && res.error) {
       setError(res.error.detail || res.error.message)
+    }else {
+      router.push('/')
     }
   }
 
   return (
     <div className="min-h-screen w-full flex items-center justify-center bg-gray-50 p-4">
       <div className="w-full max-w-md">
-        <Alert variant="destructive">
-          <CircleAlert />
-          <AlertTitle>Heads up!</AlertTitle>
-        </Alert>
+        {error && (
+          <Alert variant="destructive">
+            <CircleAlert />
+            <AlertTitle>{error}</AlertTitle>
+          </Alert>
+        )}
         <br />
         <h1 className="text-3xl font-bold text-gray-900 mb-8">Sign in</h1>
 
