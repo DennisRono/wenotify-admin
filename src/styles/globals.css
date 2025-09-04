@@ -185,3 +185,13 @@
     @apply bg-background text-foreground;
   }
 }
+
+.border {
+  border-top: 0px;
+  border-right: 0px;
+  border-left: 0px;
+}
+
+[data-slot="card"] {
+  border: 1px;
+}

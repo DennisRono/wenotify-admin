@@ -64,49 +64,7 @@ export default function DashboardSidebar() {
       href: '/analytics',
       icon: 'BarChart3',
       service_name: '',
-    },
-    {
-      title: 'Inventory',
-      href: '/inventory',
-      icon: 'Warehouse',
-      service_name: 'products_service',
-    },
-    {
-      title: 'Documents',
-      href: '/documents',
-      icon: 'FolderOpen',
-      service_name: 'docs_service',
-    },
-    {
-      title: 'CRM',
-      href: '/crm',
-      icon: 'UserCheck',
-      service_name: 'crm_service',
-    },
-    {
-      title: 'Human Resources',
-      href: '/hr',
-      icon: 'UserCog',
-      service_name: 'hr_service',
-    },
-    {
-      title: 'Finances',
-      href: '/finances',
-      icon: 'TrendingUp',
-      service_name: 'finance_service',
-    },
-    {
-      title: 'Project Management',
-      href: '/project-management',
-      icon: 'Workflow',
-      service_name: 'projects_service',
-    },
-    {
-      title: 'Assets Management',
-      href: '/assets',
-      icon: 'PiggyBank',
-      service_name: 'projects_service',
-    },
+    }
   ]
 
   const secondaryNavItems: NavItem[] = [
