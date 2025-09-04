@@ -64,10 +64,7 @@ export default function DashboardSidebar() {
       href: '/analytics',
       icon: 'BarChart3',
       service_name: '',
-    }
-  ]
-
-  const secondaryNavItems: NavItem[] = [
+    },
     {
       title: 'Reports',
       href: '/reports',
@@ -76,9 +73,11 @@ export default function DashboardSidebar() {
     },
   ]
 
+  const secondaryNavItems: NavItem[] = []
+
   const renderSubmenuTooltip = (submenu: NavItem[]) => (
     <div className="space-y-1">
-      {submenu.map(subItem => (
+      {submenu.map((subItem) => (
         <Link
           key={subItem.title}
           href={subItem.href}
@@ -102,7 +101,10 @@ export default function DashboardSidebar() {
 
   return (
     <TooltipProvider delayDuration={300}>
-      <Sidebar collapsible="icon" className="ml-2 border-none bg-background/98 backdrop-blur supports-[backdrop-filter]:bg-background/60">
+      <Sidebar
+        collapsible="icon"
+        className="ml-2 border-none bg-background/98 backdrop-blur supports-[backdrop-filter]:bg-background/60"
+      >
         <SidebarHeader className="border-b border-sidebar-border">
           <SidebarMenuItem className="list-none py-1.5">
             <SidebarTrigger />
@@ -113,7 +115,7 @@ export default function DashboardSidebar() {
             <SidebarGroupLabel>Main Navigation</SidebarGroupLabel>
             <SidebarGroupContent>
               <SidebarMenu>
-                {mainNavItems.map(item => (
+                {mainNavItems.map((item) => (
                   <SidebarMenuItem key={item.title}>
                     {item.submenu ? (
                       <>
@@ -190,7 +192,7 @@ export default function DashboardSidebar() {
                         {state === 'expanded' &&
                           openSubmenus.has(item.title) && (
                             <div className="ml-4 mt-1 space-y-1">
-                              {item.submenu.map(subItem => (
+                              {item.submenu.map((subItem) => (
                                 <SidebarMenuButton
                                   key={subItem.title}
                                   asChild
@@ -245,7 +247,7 @@ export default function DashboardSidebar() {
             <SidebarGroupLabel>Management</SidebarGroupLabel>
             <SidebarGroupContent>
               <SidebarMenu>
-                {secondaryNavItems.map(item => (
+                {secondaryNavItems.map((item) => (
                   <SidebarMenuItem key={item.title}>
                     <SidebarMenuButton
                       asChild

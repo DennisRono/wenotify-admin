@@ -8,6 +8,7 @@ import type {
   CrimeReportStatusUpdate,
   CrimeReportFilters,
 } from "@/types/crime-report"
+import { ReportStatus } from "@/types/api"
 
 const getAuthHeaders = (state: any) => ({
   Authorization: `Bearer ${state?.auth?.access_token}`,
@@ -106,7 +107,7 @@ export const reduxUpdateCrimeReport = createAsyncThunk<
 
 export const reduxUpdateCrimeReportStatus = createAsyncThunk<
   CrimeReportResponse,
-  { id: string; status: CrimeReportStatusUpdate },
+  { id: string; status: ReportStatus },
   { rejectValue: ErrorResponse }
 >("crimeReports/updateStatus", async ({ id, status }, { getState, rejectWithValue }) => {
   try {

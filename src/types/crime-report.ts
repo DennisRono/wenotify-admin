@@ -1,4 +1,5 @@
 import type { BaseEntity, CrimeCategory, CrimeSeverity, ReportStatus } from "./api"
+import { LocationResponse } from "./location"
 
 export interface CrimeReportCreate {
   title: string
@@ -40,6 +41,7 @@ export interface CrimeReportResponse extends BaseEntity {
   status: ReportStatus
   assigned_officer_id?: string | null
   location_id: string
+  location?: LocationResponse 
   priority_score?: number | null
   suspect_description?: string | null
   witness_count?: number | null

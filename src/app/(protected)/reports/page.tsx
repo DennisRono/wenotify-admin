@@ -9,10 +9,12 @@ import { Button } from "@/components/ui/button"
 import { Plus } from "lucide-react"
 import Link from "next/link"
 import type { CrimeReportFilters } from "@/types/crime-report"
+import { useSelector } from "react-redux"
+import { selectReports } from "@/store/selectors/reports"
 
 export default function ReportsPage() {
   const dispatch = useAppDispatch()
-  const { reports, loading, pagination } = useAppSelector((state) => state.crimeReports)
+  const {reports, reportsLoading: loading, totalReports, pageSize} = useSelector(selectReports)
 
   const [filters, setFilters] = useState<CrimeReportFilters>({})
   const [currentPage, setCurrentPage] = useState(1)
@@ -62,11 +64,11 @@ export default function ReportsPage() {
         <>
           <ReportsTable reports={reports} />
 
-          {pagination && pagination.total_pages > 1 && (
+          {totalReports > 1 && (
             <div className="flex items-center justify-between">
               <p className="text-sm text-muted-foreground">
-                Showing {(currentPage - 1) * 20 + 1} to {Math.min(currentPage * 20, pagination.total_items)} of{" "}
-                {pagination.total_items} reports
+                Showing {(currentPage - 1) * 20 + 1} to {Math.min(currentPage * 20, totalReports)} of{" "}
+                {totalReports} reports
               </p>
               <div className="flex gap-2">
                 <Button variant="outline" onClick={() => setCurrentPage(currentPage - 1)} disabled={currentPage === 1}>
@@ -75,7 +77,7 @@ export default function ReportsPage() {
                 <Button
                   variant="outline"
                   onClick={() => setCurrentPage(currentPage + 1)}
-                  disabled={currentPage === pagination.total_pages}
+                  disabled={currentPage === totalReports}
                 >
                   Next
                 </Button>
